@@ -1,0 +1,13 @@
+! Title: Gamersky Android - AdGuard test rules
+! Description: Conservative endpoint rules derived from one user-provided PCAPdroid capture.
+! Status: EXPERIMENTAL - not yet validated on-device.
+! Target app package observed in capture: com.gamersky
+! Last updated: 2026-10-26
+!
+! Candidate ad-system API endpoints observed in the capture.
+! Endpoint names suggest ad functionality but have not yet been independently validated.
+! Test each rule and disable the filter if normal app features break.
+!
+||router10.gamersky.com/@/adSystem/ad/getAppPopupAd^$app=com.gamersky
+||router10.gamersky.com/@/adSystem/ad/getAdAtLaunchView^$app=com.gamersky
+||router10.gamersky.com/@/adSystem/ad/getAndroidTouTiaoWangMengAd^$app=com.gamersky
